@@ -52,7 +52,7 @@ func TestParseMoney(t *testing.T) {
     if parsed.Type != storage.TYPE_EXPENSE {
         t.Errorf("Type should be %s, received %s", storage.TYPE_EXPENSE, parsed.Type)
     }
-    if parsed.Currency != "$" {
+    if parsed.Currency != "USD" {
         t.Errorf("Currency should be %s, received %s", "$", parsed.Currency)
     }
     if parsed.ReplacedString != "закинул баблишка чуваку" {
