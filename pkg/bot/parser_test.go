@@ -25,7 +25,7 @@ func TestParse(t *testing.T) {
                 t.Fatal(err.Error())
             }
             if parsed.Amount != data.out.Amount {
-                t.Errorf("Amount should be %d, received %d", data.out.Amount, parsed.Amount)
+                t.Errorf("Amount should be %.2f, received %.2f", data.out.Amount, parsed.Amount)
             }
             if parsed.Type != data.out.Type {
                 t.Errorf("Type should be \"%s\", received \"%s\"", data.out.Type, parsed.Type)
@@ -47,7 +47,7 @@ func TestParseMoney(t *testing.T) {
         t.Fatal(err.Error())
     }
     if parsed.Amount != 1370.23 {
-        t.Errorf("Amount should be %d, received %d", 1370.23, parsed.Amount)
+        t.Errorf("Amount should be %.2f, received %.2f", 1370.23, parsed.Amount)
     }
     if parsed.Type != storage.TYPE_EXPENSE {
         t.Errorf("Type should be %s, received %s", storage.TYPE_EXPENSE, parsed.Type)

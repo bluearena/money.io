@@ -64,7 +64,7 @@ func Run(cfg *config.Config) {
 
     db, err := startup.DB(dbConf.Host, dbConf.Port, dbConf.Username, dbConf.Password, dbConf.Database, logger, true)
     if err != nil {
-        logger.Fatal(err.Error)
+        logger.Fatal(err)
         panic(err.Error())
     }
     defer db.Close()
